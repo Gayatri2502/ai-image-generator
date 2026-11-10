@@ -5,8 +5,9 @@ from pathlib import Path
 
 
 def settings():
-    return {'model': os.getenv('BASE_MODEL', 'stable-diffusion-v1-5/stable-diffusion-v1-5'),
-            'adapter': os.getenv('LORA_PATH', ''), 'device': os.getenv('DEVICE', 'auto'), 'variant': os.getenv('MODEL_VARIANT', '')}
+    model = os.getenv('BASE_MODEL', 'stable-diffusion-v1-5/stable-diffusion-v1-5')
+    return {'model': model,
+            'adapter': os.getenv('LORA_PATH', ''), 'device': os.getenv('DEVICE', 'auto'), 'variant': os.getenv('MODEL_VARIANT', 'fp16' if model == 'stable-diffusion-v1-5/stable-diffusion-v1-5' else '')}
 
 
 @lru_cache(maxsize=1)

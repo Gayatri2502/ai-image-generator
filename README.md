@@ -71,6 +71,6 @@ pip install -r requirements-dev.txt
 python -m pytest -q
 ```
 
-Offline tests cover job completion, PNG download, persistent history, validation, generation failures, and dataset path validation. CI runs these without model downloads. Set `RUN_MODEL_TESTS=1` to include the real tiny-model training/export/loading test. The small-model integration was also exercised locally through a three-step training run, adapter export/reload, and image generation. The full-model browser generation check is recorded in the workspace's `RUNNING.md`.
+Offline tests cover job completion, PNG download, persistent history, validation, generation failures, and dataset path validation. CI runs these without model downloads. Set `RUN_MODEL_TESTS=1` to include the real tiny-model training/export/loading test. The small-model integration was also exercised locally through a three-step training run, adapter export/reload, and image generation. A full SD1.5 generation was also verified through the browser, including PNG saving, gallery storage, and download availability.
 
 Reference implementations: [Diffusers LoRA training](https://huggingface.co/docs/diffusers/training/lora), [LoRA loading](https://huggingface.co/docs/diffusers/api/loaders/lora), and the [SD1.5 model card](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5).
