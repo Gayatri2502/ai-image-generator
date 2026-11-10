@@ -1,7 +1,13 @@
-torch>=2.4
-diffusers>=0.32,<1
-transformers>=4.45,<5
-accelerate>=1,<2
-peft>=0.13,<1
-safetensors>=0.4,<1
-gradio>=5,<7
+# Tested with Python 3.12. Install PyTorch for your platform if needed.
+fastapi==0.162.4
+uvicorn==0.54.0
+pydantic==2.14.3
+python-dotenv==1.2.4
+httpx==0.28.1
+torch==2.15.0
+diffusers==0.36.0
+transformers==4.57.6
+accelerate==1.15.0
+peft==0.21.2
+safetensors==0.8.0
+Pillow==13.0.0
